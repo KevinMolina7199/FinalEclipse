@@ -26,7 +26,7 @@
          <jta-data-source>java:comp/DefaultDataSource</jta-data-source>
          -->
       
-      <jta-data-source>java:jboss/datasources/ejPostgresDS</jta-data-source>
+      <jta-data-source>java:jboss/datasources/ProyectoFinal</jta-data-source>
       <properties>
          <!--The database schema is auto created on deployment and dropped before redeploy.
              Note: the following configuration does not drop the tables on undeploy. If you prefer this, use this
