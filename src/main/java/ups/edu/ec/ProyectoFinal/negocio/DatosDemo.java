@@ -1,21 +1,17 @@
 package ups.edu.ec.ProyectoFinal.negocio;
 
 import java.time.LocalTime;
-import java.util.Date;
-
 import java.util.List;
 import jakarta.annotation.PostConstruct;
 import jakarta.ejb.Singleton;
 import jakarta.ejb.Startup;
 import jakarta.inject.Inject;
 import ups.edu.ec.ProyectoFinal.datos.ClienteDAO;
-import ups.edu.ec.ProyectoFinal.datos.DetalleFacturaDAO;
 import ups.edu.ec.ProyectoFinal.datos.FacturaDAO;
 import ups.edu.ec.ProyectoFinal.datos.TarifaDAO;
 import ups.edu.ec.ProyectoFinal.datos.TicketDAO;
 import ups.edu.ec.ProyectoFinal.datos.VehiculoDAO;
 import ups.edu.ec.ProyectoFinal.modelo.Cliente;
-import ups.edu.ec.ProyectoFinal.modelo.DetalleFactura;
 import ups.edu.ec.ProyectoFinal.modelo.Factura;
 import ups.edu.ec.ProyectoFinal.modelo.Tarifa;
 import ups.edu.ec.ProyectoFinal.modelo.Ticket;
@@ -72,13 +68,13 @@ public class DatosDemo {
 		daoVehiculo.insert(v1);
 		
 		Tarifa ta1 = new Tarifa();
-		ta1.setId(1);
+		//ta1.setId(1);
 		ta1.setMonto(1.5);
 		ta1.setTipo("Normal");
 		daoTarifa.insert(ta1);
 		
 		Ticket t1 = new Ticket();
-		t1.setNumero(1);
+		//t1.setNumero(1);
 		t1.setFechaIngreso(LocalTime.now());
 		t1.setFechaSalida(LocalTime.of(14, 30));
 		t1.setEstado("Activo");
@@ -87,8 +83,9 @@ public class DatosDemo {
 		daoTicket.insert(t1);
 		
 		Factura f = new Factura();
-		f.setNumero(0);
-		f.setFecha(new Date());
+		//f.setNumero(0);
+		f.setFecha(LocalTime.now());
+		f.setTotal(1);
 		f.setCliente(c1);
 		f.setTicket(t1);
 		daoFactura.insert(f);

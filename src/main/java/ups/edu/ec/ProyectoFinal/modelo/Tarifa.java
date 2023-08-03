@@ -2,6 +2,7 @@ package ups.edu.ec.ProyectoFinal.modelo;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
@@ -10,6 +11,7 @@ import jakarta.persistence.OneToOne;
 public class Tarifa {
 
 	@Id
+    @GeneratedValue
 	@Column(name="tar_id")
 	private int id;
 	
